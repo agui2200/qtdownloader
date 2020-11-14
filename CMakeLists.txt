@@ -44,7 +44,7 @@ if (WIN_32)
             )
 
 
-endif (WIN_32)
+endif (WIN_32
 
 if (UNIX)
     target_link_libraries(d_6akc_com
