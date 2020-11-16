@@ -48,7 +48,7 @@ void ffmpegReadLists(QAbstractItemModel *itemModel) {
         // 修改状态
         auto statusidx = itemModel->index(i, 2);
         qDebug() << "修改任务状态" << itemModel->itemData(statusidx);
-        itemModel->setData(idx, "下载中");
+        itemModel->setData(statusidx, "下载中");
         // 调用ffmpeg
         // 创建一个文件
         auto urlidx = itemModel->index(i, 0);
