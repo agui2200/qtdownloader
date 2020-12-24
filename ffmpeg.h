@@ -15,6 +15,9 @@ public:
     explicit ffmpeg();
 
     static int read(const QString &url, QString outFileName);
+
+
+    static int read2(const QString &url, QString outFileName);
 };
 
 

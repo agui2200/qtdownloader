@@ -54,7 +54,8 @@ void ffmpegReadLists(QAbstractItemModel *itemModel) {
         auto urlidx = itemModel->index(i, 0);
         auto output = itemModel->itemData(urlidx);
         // 创建一个新线程
-        auto ret = ffmpeg::read(reinterpret_cast<const QString &>(urlItem[0]), reinterpret_cast<QString &&>(output[0]));
+        auto ret = ffmpeg::read2(reinterpret_cast<const QString &>(urlItem[0]),
+                                 reinterpret_cast<QString &&>(output[0]));
         if (ret == -1) {
             itemModel->setData(statusidx, "下载失败");
         } else {
